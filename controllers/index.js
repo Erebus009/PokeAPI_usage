@@ -1,8 +1,8 @@
 const router = require("express").Router()
-const APIroute = require('./api.js')
+const apiRoute = require('./api')
 const ViewsRoute = require('./views')
 
-router.use("/api", APIRoute)
+router.use("/api", apiRoute)
 router.use("/", ViewsRoute)
 
 
