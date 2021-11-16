@@ -22,9 +22,11 @@ function create(pokemon) {
   pokemonEL.classList.add("pokemonBox");
 
   const pokeInnerHtml = `
-    <img src=${pokemon.sprites.front_default}>
+   
     
-    ${capitalizeFirstLetter(pokemon.name)} || Height: ${heightConversionFeet(pokemon.height)}
+    ${capitalizeFirstLetter(pokemon.name)} || Height: ${heightConversionFeet(pokemon.height)}'Ft
+    <img src=${pokemon.sprites.front_default}>
+     ${pokemon.types[0].type.name}
     
     `;
   pokemonEL.innerHTML = pokeInnerHtml;
