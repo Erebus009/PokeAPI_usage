@@ -1,9 +1,25 @@
 import React, { Component } from "react";
 import spinner from "../layout/images/spinner.gif"
 import styled from "styled-components"
+import {Link} from "react-router-dom"
 const Sprite = styled.img`
 width: 5em;
 height: 5em`
+
+const StyledLink = styled(Link)`
+    text-decoration = none;
+    color: black;
+    &:focus,
+    &:hover{
+        color: gray
+    },
+    &:visited,
+    &:link,
+    &:active{
+        text-decoration: none;
+        
+    }
+  `
 
 export default class PokeCard extends Component {
   state = {
@@ -11,13 +27,13 @@ export default class PokeCard extends Component {
     PokeImage: "",
     PokeIndex: "",
     imageloading : true,
-    type: ""
+    
   };
 
   
 
   componentDidMount() {
-    const { name, url, type } = this.props;
+    const { name, url } = this.props;
     const PokeIndex = url.split("/")[url.split("/").length - 2];
     const PokeImage = `https://github.com/pokeapi/sprites/blob/master/sprites/pokemon/${PokeIndex}.png?raw=true`;
 
@@ -27,7 +43,8 @@ export default class PokeCard extends Component {
   render() {
     return (
       <div className="col-md-3 col-sm-6 mb-5">
-        <div className="card">
+          <StyledLink to={`pokemon/${this.state.PokeIndex}`}>
+        <div className="card shadow">
           <h5 className="card-header bg-dark text-white">{this.state.PokeIndex}</h5>
           <h1>{this.state.type}</h1>
           {this.state.imageloading ? (
@@ -51,6 +68,7 @@ export default class PokeCard extends Component {
           
           </div>
         </div>
+        </StyledLink>
       </div>
     );
   }
