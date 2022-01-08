@@ -8,7 +8,7 @@ const Nav = (props) => {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="https://erebus009.github.io/PokeDex-with-React/">
             <img
               alt=""
               src={pokeball}
