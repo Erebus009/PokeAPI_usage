@@ -7,8 +7,8 @@ export default class PokeList extends Component {
     url: "https://pokeapi.co/api/v2/pokemon/?limit=151",
     pokemon: null,
   };
-   async componentDidMount() {
-    const response =  await axios.get(this.state.url);
+  async componentDidMount() {
+    const response = await axios.get(this.state.url);
     this.setState({ pokemon: response.data["results"] });
   }
 
