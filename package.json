@@ -1,7 +1,6 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "proxy": "https://erebus009.github.io/PokeDex-with-React/",
   "homepage": "https://erebus009.github.io/PokeDex-with-React/",
   "private": true,
   "dependencies": {
