@@ -51,13 +51,13 @@ export default class Pokemon extends Component {
     catchRate: "",
   };
 
-  async componentDidMount() {
+  componentDidMount() {
     const url = window.location.href;
     const PokeIndex = url.split("/")[url.split("/").length - 1];
     const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${PokeIndex}/`;
     const pokemonType = `https://pokeapi.co/api/v2/pokemon-species/${PokeIndex}/`;
 
-    const PokeRes = await axios.get(pokemonUrl);
+    const PokeRes =  axios.get(pokemonUrl);
 
     const height =
       Math.round((PokeRes.data.height * 0.343124 + 0.0001) * 100) / 100;
@@ -90,7 +90,7 @@ export default class Pokemon extends Component {
       })
       .join(", ");
 
-    await axios.get(pokemonType).then((res) => {
+     axios.get(pokemonType).then((res) => {
       let description = "";
       res.data.flavor_text_entries.some(flavor => {
         if (

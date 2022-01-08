@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PokeList from '../Pokemon/PokeList'
+import PokeList from '../Pages/PokeList'
 
 export default class Dashbaord extends Component {
     render() {

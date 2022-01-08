@@ -4,7 +4,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Dashbaord from "./Components/layout/Dashbaord";
-import Pokemon from "./Components/Pokemon/Pokemon"
+import Pokemon from "./Components/Pages/Pokemon"
 import { BrowserRouter, Routes, Route,  } from "react-router-dom";
 
 function App() {
