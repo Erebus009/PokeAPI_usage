@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Dashbaord from "./Components/layout/Dashbaord";
 import Pokemon from "./Components/Pokemon/Pokemon"
-import { BrowserRouter, Routes, Route,HashRouter  } from "react-router-dom";
+import {  Routes, Route,HashRouter  } from "react-router-dom";
 
 function App() {
   return (
